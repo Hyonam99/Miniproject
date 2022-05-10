@@ -1,0 +1,579 @@
+/*importing font-family poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*reset browser default style*/
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+header {
+    background-image: url(./images/laptop\ background.jpg);
+    background-size: cover;
+    background-position: 50%;
+    height:90vh;
+    position:relative;
+}
+
+.header-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    position:absolute;
+    top:0;
+    height:90vh;
+    width:100%;
+}
+
+.header-content-wrapper{
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    text-align: center;
+
+}
+/* LOGO */
+.logo{
+    font-size:30px;
+    font-weight: bold;
+    color:rgba(223, 70, 14, 0.979);
+    
+}
+
+
+/*NAV LINK STYLING*/
+.navlink{
+    color:#ffffff;
+    font-size: 20px;
+    font-weight:bold;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+.navlink.active{
+    color:rgba(223, 70, 14, 0.979);
+}
+.nav-link-wrapper a:hover{
+    color:rgba(223, 70, 14, 0.979);
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media (max-width: 320px) {
+    .header-content-wrapper {   
+      flex-direction: column;
+    }
+  }
+
+
+  @media (max-width: 700px) {
+    .header-content-wrapper {   
+      flex-direction: column;
+    }
+  }
+
+
+  @media (max-width: 769px) {
+    .header-content-wrapper {   
+      flex-direction: column;
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    .header-content-wrapper {   
+      flex-direction: column;
+    }
+  }
+
+
+
+
+.hero-wrapper{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.profile-image{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+}
+
+.full-name  {
+    color:#ffffff;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin: 10px 0px; /*up and down margin is 10px, left and right margin is 0px*/
+}
+
+.brief {
+    color:#ffffff;
+    font-size: 22px;
+    font-weight:bold;
+    margin-bottom: 10px;
+}
+
+.hero-media-wrapper svg {
+    width:30px;
+    height: 30px;
+    fill:#ffffff;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 7px;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+/*button styling*/
+
+.btn{
+    background-color: rgba(223, 70, 14, 0.979);
+    color:#ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 25px;
+    border:none;
+    margin: 10px;
+    letter-spacing: 1;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+.download-button {
+    background-color:#ffffff ;
+    color:rgba(223, 70, 14, 0.979);
+}
+
+.download-button:hover {
+    background-color: rgba(223, 70, 14, 0.979);
+    color:#ffffff;
+}
+
+
+/*MAIN SECTION STYLING*/
+
+main {
+    margin-top: 100px;
+}
+
+.section{
+    padding:45px;
+}
+
+.section h2{
+    font-size:30px;
+    font-weight: bold;
+    color:rgba(223, 70, 14, 0.979);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about-me{
+    width:80%;
+    margin: 0 auto;
+}
+
+.about-brief {
+    text-align: center;
+    margin-top:20px;
+    line-height: 2;
+}
+
+
+/*currently working at section*/
+
+.place-of-work-section{
+    background-color:rgba(223, 70, 14, 0.979);
+    margin:40px 0;
+    min-height:300px; /*means it can be more than 300px, but it should not be less than 300px*/
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.place-of-work-section h2{
+    color:rgb(2, 2, 46);
+}
+.place-of-work-wrapper{
+    text-align: center;
+    margin:40px 0;
+}
+
+.place-of-work-pill{
+    background-color:black;
+    color:#ffffff;
+    padding: 10px;
+    margin: 4px;
+    border-radius: 25px;
+    font-size:14px;
+    transition: 1.5s;
+}
+
+.place-of-work-pill:hover {
+    fill:black;
+    cursor:pointer;
+    position:relative;
+    bottom:10px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media (max-width: 320px) {
+    .place-of-work-pill {   
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        margin-top: 2rem;
+        flex-wrap:wrap;
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    .place-of-work-pill {   
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        margin-top: 2rem;
+        flex-wrap:wrap;
+    }
+  }
+
+
+@media (max-width: 700px) {
+    .place-of-work-pill {   
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        margin-top: 2rem;
+        flex-wrap:wrap;
+    }
+  }
+
+
+  @media (max-width: 769px) {
+    .place-of-work-pill {   
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        margin-top: 2rem;
+        flex-wrap:wrap;
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    .place-of-work-pill {   
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        margin-top: 2rem;
+        flex-wrap:wrap;
+    }
+  }
+
+
+/*PROJECT CARDS STYLING*/
+
+.project-card-wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:100px;
+    margin-top: 4rem;
+    flex-wrap:wrap;
+    max-width:fit-content;
+    max-height:fit-content;
+}
+
+.project-card{
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    transition:0.3s;
+    border-radius:5px;
+    flex-basis:10%;
+    flex-grow:1;
+    flex-shrink:0;
+}
+
+.project-card:hover {
+    box-shadow: 0 2px 0 4px rgba(19, 18, 18, 0.5);
+    background-color: #ffffff;
+}
+
+.project-card img {
+    width:100%;
+    height:200px;
+}
+
+.card-content{
+    width:300px;
+    padding:2px 16px;
+}
+
+.project-title{
+    color:rgba(223, 70, 14, 0.979);
+    margin-bottom: 10px;
+    font-size:18px;
+}
+
+.project-brief{
+    font-size:15px;
+}
+
+.project-links {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap:10px;
+}
+
+.project-links svg{
+    width:20px;
+    height:30px;
+    fill:rgba(223, 70, 14, 0.979);
+}
+
+/*STACK SECTION STYLING*/
+ /*you can also seperate the stack-group into four items per section and reduce the gap to 10px to get the same double row wrap effect*/
+.stack-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap:30px;
+    flex-wrap: wrap;
+}
+
+/*STACK SECTION STYLING - FOR CHROME*/
+.stack-progress::-webkit-progress-bar {
+    background-color:  rgb(167, 145, 145);
+    border-radius: 100px;
+}
+
+.stack-progress::-webkit-progress-value {
+    background-color: rgba(223, 70, 14, 0.979);
+    border-radius: 100px;
+}
+
+/*STACK SECTION STYLING - FOR FIREFOX BROWSER*/
+
+.stack-progress::-moz-progress-bar {
+    background-color: rgb(167, 145, 145);
+    border-radius: 100px;
+}
+
+/*STACK SECTION STYLING - FOR IE10 BROWSER*/
+
+.stack-progress {
+    color: rgb(223, 70, 14);
+    border-radius: 100px;
+}
+
+.stack-progress-wrapper label {
+    display:block;
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media (max-width: 700px) {
+    .stack-group {   
+      flex-direction: column;
+    }
+  }
+
+
+/*service section styling*/
+
+.service-section {
+    margin: 40px 0;
+    min-height: 300px;
+    background-color:rgb(223, 70, 14);
+}
+
+.service-section  h2 {
+    color:rgb(2, 2, 46);
+    margin-bottom: 40px;
+}
+
+.service-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.service-card{
+    background-color: #ffffff;
+    box-shadow: 0 2px 0 4px rgba(19, 18, 18, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card:hover {
+    box-shadow: 0 4px 0 8px rgba(19, 18, 18, 0.5);
+    background-color: #ffffff;
+}
+
+.service-card svg {
+    width:30px;
+    height: 30px;
+    color:rgb(223, 70, 14);
+    margin-bottom: 10px;
+}
+
+.service-card-content {
+    text-align: center;
+    padding:2px 16px;
+    width: 300px;
+}
+
+.service-title{
+    color:rgb(223, 70, 14);
+    margin-bottom: 10px;
+    font: size 17px;
+}
+
+.service-brief{
+    color:rgb(2, 2, 46);
+    margin-bottom: 10px;
+    font: size 14px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+
+@media (max-width: 320px) {
+    .service-card-wrapper {   
+      flex-direction: column;
+      gap: 100px;
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    .service-card-wrapper {   
+      flex-direction: column;
+      gap: 100px;
+    }
+  }
+
+
+
+@media (max-width: 700px) {
+    .service-card-wrapper {   
+      flex-direction: column;
+      gap: 100px;
+    }
+  }
+
+  @media (max-width: 769px) {
+    .service-card-wrapper {   
+      flex-direction: column;
+      gap: 100px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .service-card-wrapper {   
+      flex-direction: column;
+      gap: 100px;
+    }
+  }
+
+
+
+/*WORK WITH ME FORM SECTION*/
+
+.form-section form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom: 10px;
+}
+
+.form-group input{
+    border: 1px solid rgb(223, 70, 14);
+    border-radius:5px;
+    padding:10px;
+    width:400px;
+    margin-bottom: 10px;
+    font-size:14px;
+}
+
+.form-group textarea{
+    border: 1px solid rgb(223, 70, 14);
+    border-radius:5px;
+    padding:10px;
+    width:400px;
+    height:350px;
+    resize:none;
+    margin-bottom:10px;
+}
+
+/*SOCIAL MEDIAL CONNECT STYLING SECTION*/
+.social-account-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+
+.social-account-wrapper svg{
+    width:30px;
+    height:30px;
+    fill:rgba(223, 70, 14, 0.979);
+}
+
+
+.social-account-wrapper svg:hover{
+    fill:black;
+    cursor:pointer;
+    position:relative;
+    bottom:10px;
+}
